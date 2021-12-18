@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi String dan Number</title>
+</head>
+<body>
+    <script>
+
+        /*
+        Melakukan Konversi String dan Number
+
+        parseInt(string)        : Mengkonversi dari String ke Number(bilangan bulat)
+        parseFloat(string)      : Mengkonversi dari String ke Number(bilangan pecahan)
+        Number(string)          : Mengkonversi dari String ke Number(bilangan bulat atau pecahan)
+        number.toString         : Mengkonversi dari Number ke String
+
+        NaN = Not a Number | menunjukkan bahwa suatu karakter tersebut bukan merupakan number
+
+        isNaN() adalah fungsi yang digunakan untuk mengecek apakah sebuah number itu adalah NaN, menghasilkan tipe data boolean (true dan false)
+        */
+        
+        const value1 = "1";
+        const value2 = 1;
+        const sum = value1 + value2;
+        const sum2 = parseInt(value1) + value2;
+
+        document.writeln(`<p>${sum}</p>`);
+        document.writeln(`<p>${sum2}</p>`);
+        
+        document.writeln(`<p>${parseInt("1.9")}</p>`);
+        document.writeln(`<p>${parseFloat("1.1")}</p>`);
+        document.writeln(`<p>${Number("1.1")}</p>`);
+
+        const a = 1;
+        const b = 1;
+        const total = a.toString() + b.toString();
+        document.writeln(`<p>${total}</p>`);
+
+        // parseInt() dan parseFloat() masih mentolenransi kesalahan penulisan nilai di belakan
+        document.writeln(`<p>${parseInt("1salah")}</p>`);
+        document.writeln(`<p>${parseFloat("1.1faizal")}</p>`);
+        
+        // Number() tidak mentoleransi kesalahan penulisan
+        document.writeln(`<p>${Number("1.1salah")}</p>`);
+        document.writeln(`<p>${Number("1.1faizal")}</p>`);
+        document.writeln(`<p>${Number("salah")}</p>`);
+
+        // Operasi pada NaN akan selalu menghasilkan NaN
+        const valueA = Number("salah"); // NaN
+        const valueB = 200;
+        const sumA = valueA + valueB; // NaN
+
+        document.writeln(`<p>${sumA}</p>`);
+        document.writeln(`<p>${isNaN(sumA)}</p>`);
+        document.writeln(`<p>${isNaN(valueB)}</p>`);
+        
+    </script>
+</body>
+</html>

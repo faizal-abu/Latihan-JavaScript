@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falsy and Truthy</title>
+</head>
+<body>
+    <script>
+        /*
+        Falsy :
+        - Falsy atau kadang ditulis falsey, adalah value yang ketika dalan konteks boolean, dia dianggap false
+        - merupakan salah satu fitur JavaScript yang berguna
+
+        Data Falsy
+        ---------------------------------------------------------
+        Data diangap Falsy  | Keterangan
+        ---------------------------------------------------------
+        false               | Boolean false
+        0,-0                | Number 0 dan -0 dianggap false
+        "", '', ``          | Semua string kosong dianggap false 
+        null                | null dianggap false
+        undefined           | undefined dianggap false
+        NaN                 | Not a Number dianggap false
+        ---------------------------------------------------------
+
+        Truthy :
+        semua yang tidak termasuk falsy
+        */
+
+        let data = -0;
+
+        if(data){
+            document.writeln("True");
+        } else {
+            document.writeln("False");
+        }
+
+    </script>
+</body>
+</html>

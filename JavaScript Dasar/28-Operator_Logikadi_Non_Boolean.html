@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika di Non Boolean</title>
+</head>
+<body>
+    <script>
+        /*
+        di dalam JavaScript kita bisa menggunakan operator logika AND (&&) dan OR (||) untuk tipe data non boolean
+
+        Operator Logika OR (||)
+        - membaca dari kiti ke kanan
+        - mengambil nilai pertama yang truthy
+        - jika tidak ada satupun nilai yang truthy, maka yang terakhir yang akan diambil
+        
+        ---------------------------------------------------------------------------------
+        
+        Opererator Logika AND (&&)
+        - membaca dari kiri ke kanan
+        - mengambil nilai pertama yang falsy
+        - jika tidak ada satupun nilai yang falsy, maka yang terakhir yang akan diambil
+        */
+
+        // ###############################################################################
+        
+        console.info("Hello" || "");
+        console.info("" || []);
+        console.info("" || {});
+        console.info("0" || "NOL");
+        console.info(0 || "NOL");
+        console.info(null || "null");
+        console.info(undefined || "undefined");
+        console.info( -0 || false);
+
+        const person = {
+            firstName: "Faizal",
+            lastName: "Zulfa"
+        }
+
+        const name = person.firstName || person.lastName;
+        console.info(name);
+        
+        // ###############################################################################
+
+        console.info("Hello" && false);
+        console.info(NaN && []);
+        console.info(0 && {});
+        console.info("0" && "NOL");
+        console.info(0 && "NOL");
+        console.info(null && "null");
+        console.info(undefined && "undefined");
+        console.info( -0 && false);
+
+        const nama = person.firstName && person.lastName;
+        console.info(nama);
+
+    </script>
+</body>
+</html>

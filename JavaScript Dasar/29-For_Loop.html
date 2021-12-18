@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <script>
+        /*
+        Block kode yang terdapat di dalam for akan selalu diulangi selama kondisi for terpenuhi
+
+        Sintak Perulangan For
+
+        for (init statement; kondisi; post statement) {
+            block perulangan            
+        }
+        
+        - Init statement akan dieksekusi hanya sekal diawal sebelum perulangan
+        - Kondisi akan dilakukan pengecekan dalam setiap perulangan, jika true perulangan akan dilakukan, jika false perulangan akan berhenti
+        - Post statement akan dieksekusi setiap kali diakhir perulangan
+        - Init statement, Kondisi, dan Post Statement tidak wajib diisi. jika Kondisi tidak diisi, berarti kondisi selalu bernilai true
+        */
+
+        for (let counter = 1; counter <= 15; counter++) {
+            document.writeln(`<p>Perulangan ke ${counter}</p>`);
+        }
+
+    </script>
+</body>
+</html>
